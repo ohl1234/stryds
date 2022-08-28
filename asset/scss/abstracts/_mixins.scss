@@ -19,3 +19,35 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin gradi-Green {
+    background-image: linear-gradient(90deg,#04fccb,#40fd8f);
+}
+
+@mixin gradi-Blue1 {
+    background-image: linear-gradient(90deg,#0082f3,#0ef0ea);
+    -webkit-filter: saturate(150%);
+    filter: saturate(150%);
+}
+
+@mixin gradi-Blue2 {
+    background-image: linear-gradient(90deg,#05cafe,#2f32cf);
+}
+
+@mixin gradi-Pink {
+    background-image: linear-gradient(90deg,#e400ff,#f50d5b);
+}
+
+@mixin gradi-Yellow {
+    background-image: linear-gradient(90deg,#e4f12e,#56db63);
+}
+
+@mixin  gradi-Purple {
+    background-image: linear-gradient(90deg,#bd039f,#9460e4);
+}
+
+@mixin clip-Text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

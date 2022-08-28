@@ -6,3 +6,57 @@
     overflow: hidden;
     margin: -1px;
 }
+
+.gradient-txt1 {
+    @include gradi-Blue1;
+    @include clip-Text;
+}
+.gradient-txt2 {
+    @include gradi-Blue2;
+    @include clip-Text;
+}
+.gradient-txt3 {
+    @include gradi-Pink;
+    @include clip-Text;
+}
+.gradient-txt4 {
+    @include gradi-Yellow;
+    @include clip-Text;
+}
+.gradient-txt5 {
+    @include gradi-Purple;
+    @include clip-Text;
+}
+.gradient-txt6 {
+    @include gradi-Green;
+    @include clip-Text;
+}
+
+.line {
+    display: inline-block;
+        width: 100%;
+        height: 0.2vh;
+        margin: 5.5vh 0;
+}
+.gradient-line1 {
+    @include gradi-Blue1;
+    display: inline-block;
+    width: 100%;
+    height: 0.2vh;
+    margin: 5.5vh 0;
+}
+.gradient-line2 {
+    @include gradi-Blue2;
+}
+.gradient-line3 {
+    @include gradi-Pink;
+}
+.gradient-line4 {
+    @include gradi-Yellow;
+}
+.gradient-line5 {
+    @include gradi-Purple;
+}
+.gradient-line6 {
+    @include gradi-Green;
+}

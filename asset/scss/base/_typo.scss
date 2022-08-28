@@ -1,14 +1,25 @@
 @font-face {
-    font-family: 'PPNeueMontreal-Medium';
-    src: url(../font/PPNeueMontreal-Medium.eot);
-    src: url(../font/PPNeueMontreal-Medium.eot?#iefix) format('embedded-opentype'),
-         url(../font/PPNeueMontreal-Medium.svg#PPNeueMontreal-Medium) format('svg'),
-         url(../font/PPNeueMontreal-Medium.otf) format('otf'),
-         url(../font/PPNeueMontreal-Medium.ttf) format('truetype'),
-         url(../font/PPNeueMontreal-Medium.woff) format('woff'),
-         url(../font/PPNeueMontreal-Medium.woff2) format('woff2');
+font-family: 'HelveticaNeueLTPro';
+src: url(../fonts/HelveticaNeueLTPro-Md.eot);
+src: url(../fonts/HelveticaNeueLTPro-Md.eot?#iefix) format('embedded-opentype'),
+     url(../fonts/HelveticaNeueLTPro-Md.otf) format('otf'),
+     url(../fonts/HelveticaNeueLTPro-Md.svg#HelveticaNeueLTPro-Md) format('svg'),
+     url(../fonts/HelveticaNeueLTPro-Md.ttf) format('truetype'),
+     url(../fonts/HelveticaNeueLTPro-Md.woff) format('woff'),
+     url(../fonts/HelveticaNeueLTPro-Md.woff2) format('woff2');
 
-    font-weight: 530;
-    font-style: normal;
-  }
-  
+     font-weight: 500;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'HelveticaNeueLTPro';
+     src: url(../fonts/HelveticaNeueLTPro-Bd.eot);
+     src: url(../fonts/HelveticaNeueLTPro-Bd.eot?#iefix) format('embedded-opentype'),
+          url(../fonts/HelveticaNeueLTPro-Bd.otf) format('otf'),
+          url(../fonts/HelveticaNeueLTPro-Bd.svg#HelveticaNeueLTPro-Bd) format('svg'),
+          url(../fonts/HelveticaNeueLTPro-Bd.ttf) format('truetype'),
+          url(../fonts/HelveticaNeueLTPro-Bd.woff) format('woff'),
+          url(../fonts/HelveticaNeueLTPro-Bd.woff2) format('woff2');
+     
+}

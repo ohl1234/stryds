@@ -1,0 +1,55 @@
+.sc-visual {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100%;
+    padding: 61vh 5.5vh 0;
+    .txt-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .sc-title {
+            span{
+                font-size: 34.2vh;
+                line-height: 31.1vh;
+                font-weight: 500;
+                letter-spacing: -.7vh;
+            }
+        }
+        .visual-desc {
+            font-size: 11vh;
+            line-height: 9vh;
+            font-weight: 500;
+            letter-spacing: -.13vh;
+            &  > span{
+                display: block;
+                & + span{
+                    margin: 5.5vh 0;
+                }
+            }
+            .mobile {
+                display: none;
+            }
+        }
+        strong{
+            font-size: 34.2vh;
+            height: 31.1vh;
+            line-height: 40vh;
+            font-weight: 500;
+            letter-spacing: -.7vh;
+            &.gradient-txt4{
+                line-height: 33.8vh;
+            }
+        }
+    }
+    .thumb-area {
+        position: absolute;
+        top:-25%;
+        right: 0;
+        width: 400px;
+        height: 100%;
+        background-image: url(../images/visual.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
