@@ -94,3 +94,45 @@
         }
     }
 }
+
+.sc-app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100%;
+    padding-top: 14.4vh;
+    padding-bottom: 14.4vh;
+    background-color: #0e0e0e;
+    .device-list {
+        display: flex;
+    }
+    .device-item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .mockup {
+        z-index: 3;
+        width: 430px;
+    }
+    .app-display{
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 375px;
+        height: 813px;
+        padding-top: 30px;
+        border-radius: 80px;
+        img{
+            align-self: flex-start;
+            width: 100%;
+        }
+    }
+}
