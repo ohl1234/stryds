@@ -307,3 +307,55 @@
         }
     }
 }
+
+.sc-together {
+    width: 100vw;
+    .group-flex3 {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+        }
+        .sc-title {
+            @include position-Center;
+            z-index: 4;
+            font-size: 24vh;
+            line-height: 21vh;
+            white-space: nowrap;
+            span {
+                display: inline-block;
+            }
+        }
+        .together-bg {
+            display: flex;
+            flex-direction: column;
+            &.mobile {
+                display: none;
+            }
+        }
+        .bg-wrap {
+            display: flex;
+        }
+    }
+    .group-flex4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5.5vh;
+        .together-desc {
+            color: rgba(255,255,255,.89);
+            font-size: 11vh;
+            line-height: 9vh;
+            font-weight: 500;
+            letter-spacing: -.13vh;
+        }
+    }
+}

@@ -611,3 +611,58 @@ input, select, button, fieldset {
 .sc-feature .group-body .bar {
   background-image: linear-gradient(90deg, #e4f12e, #56db63);
 }
+
+.sc-together {
+  width: 100vw;
+}
+.sc-together .group-flex3 {
+  position: relative;
+}
+.sc-together .group-flex3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.sc-together .group-flex3 .sc-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  font-size: 24vh;
+  line-height: 21vh;
+  white-space: nowrap;
+}
+.sc-together .group-flex3 .sc-title span {
+  display: inline-block;
+}
+.sc-together .group-flex3 .together-bg {
+  display: flex;
+  flex-direction: column;
+}
+.sc-together .group-flex3 .together-bg.mobile {
+  display: none;
+}
+.sc-together .group-flex3 .bg-wrap {
+  display: flex;
+}
+.sc-together .group-flex4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5.5vh;
+}
+.sc-together .group-flex4 .together-desc {
+  color: rgba(255, 255, 255, 0.89);
+  font-size: 11vh;
+  line-height: 9vh;
+  font-weight: 500;
+  letter-spacing: -0.13vh;
+}
