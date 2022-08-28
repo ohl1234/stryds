@@ -359,3 +359,48 @@
         }
     }
 }
+
+.sc-story {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100vw;
+    height: 100%;
+    .sc-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        padding-right: 5.5vh;
+        padding-bottom: 7vh;
+        padding-left: 5.5vh;
+        color: #232323;
+        font-size: 11vh;
+        line-height: 9vh;
+        font-weight: 500;
+        letter-spacing: -.13vh;
+        .tit-line {
+            display: block;
+            width: 100%;
+            height: 0.1vh;
+            background-color: rgba(0,0,0,.34);
+        }
+    }
+    .link-story {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        height: 85vh;
+        background-color: #fff;
+        opacity: 0.89;
+        img {
+            height: 100%;
+            -webkit-filter: contrast(121%) grayscale(100%);
+            filter: contrast(121%) grayscale(100%);
+        ;
+        }
+    }
+}
