@@ -81,7 +81,7 @@ body {
   color: #fff;
   font-family: "HelveticaNeueLTPro", arial, sans-serif;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.2;
 }
 
 .hidden,
@@ -266,10 +266,6 @@ input, select, button, fieldset {
 .gradient-line1 {
   background-image: linear-gradient(90deg, #0082f3, #0ef0ea);
   filter: saturate(150%);
-  display: inline-block;
-  width: 100%;
-  height: 0.2vh;
-  margin: 5.5vh 0;
 }
 
 .gradient-line2 {
@@ -360,6 +356,10 @@ input, select, button, fieldset {
   background-size: 100%;
 }
 
+.sc-you {
+  width: 100vw;
+  padding: 5.5vh;
+}
 .sc-you .group-flex1 {
   position: relative;
   height: 50vw;
@@ -442,4 +442,42 @@ input, select, button, fieldset {
 .sc-app .app-display img {
   align-self: flex-start;
   width: 100%;
+}
+
+.sc-paragraph {
+  width: 100vw;
+}
+.sc-paragraph .line-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.sc-paragraph .vt-line {
+  width: 0.2px;
+  height: 21vh;
+}
+.sc-paragraph .paragraph {
+  padding: 5.5vh 0;
+  font-size: 24vh;
+  line-height: 22vh;
+  font-weight: 500;
+  text-align: left;
+}
+.sc-paragraph .paragraph-wrap1 {
+  padding: 0 5.5vh;
+}
+.sc-paragraph .paragraph-wrap1 .vt-line {
+  background-color: rgba(255, 255, 255, 0.89);
+}
+.sc-paragraph .paragraph-wrap2 {
+  padding: 0 5.5vh;
+  background-color: #fff;
+  color: #232323;
+}
+.sc-paragraph .paragraph-wrap2 .vt-line {
+  background-color: rgba(0, 0, 0, 0.89);
+}
+.sc-paragraph .paragraph-wrap2 .paragraph span:nth-of-type(4) {
+  display: inline-block;
 }

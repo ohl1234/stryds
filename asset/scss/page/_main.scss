@@ -55,6 +55,8 @@
 }
 
 .sc-you {
+    width: 100vw;
+    padding: 5.5vh;
     .group-flex1 {
         position: relative;
         height: 50vw;
@@ -133,6 +135,48 @@
         img{
             align-self: flex-start;
             width: 100%;
+        }
+    }
+}
+
+.sc-paragraph {
+    width: 100vw;
+    .line-wrap{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .vt-line{
+        width: 0.2px;
+        height: 21vh;
+    }
+    .paragraph{
+        padding: 5.5vh 0;
+        font-size: 24vh;
+        line-height: 22vh;
+        font-weight: 500;
+        text-align: left;
+    }
+    .paragraph-wrap1 {
+        padding: 0 5.5vh;
+        .vt-line{
+            background-color: rgba(255,255,255,.89);
+        }
+    }
+    .paragraph-wrap2 {
+        padding: 0 5.5vh;
+        background-color: #fff;
+        color: #232323;
+        .vt-line{
+            background-color: rgba(0,0,0,.89);
+        }
+        .paragraph {
+            span{
+                &:nth-of-type(4) {
+                    display: inline-block;
+                }
+            }
         }
     }
 }
