@@ -404,3 +404,127 @@
         }
     }
 }
+
+.sc-send {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    .send-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+        padding-top: 23.3vh;
+        padding-bottom: 8.9vh;
+        & > * {
+            width: 80%;
+            align-self: center;
+        }
+    }
+    .txt-area {
+        em {
+            display: block;
+            font-size: 2.1vh;
+            line-height: 2.5vh;
+            color: rgba(255,255,255,.55);
+            margin-bottom: 3.4vh;
+        }
+        .sc-title {
+            font-size: 11vh;
+            line-height: 10vh;
+            font-weight: 500;
+            letter-spacing: -.13vh;
+            color: rgba(255,255,255,.89);
+            span {
+                line-height: 1;
+            }
+        }
+    }
+    .send-area {
+        display: flex;
+        flex-direction: column;
+    }
+    .send-form {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .input-box {
+        display: flex;
+        justify-content: space-between;
+        height: 46px;
+        border-bottom: 1px solid rgba(255,255,255,.34);
+        input {
+            width: calc(100% - 46px);
+            &::placeholder {
+                font-size: 1.9vh;
+                line-height: 2vh;
+                color: rgba(255,255,255,.89);
+            }
+        }
+    }
+    .btn-send {
+        width: 46px;
+        height: 46px;
+        background-image: url(../images/arrow.png);
+        background-repeat: no-repeat;
+        background-size: 27px;
+        background-position: center;
+
+    }
+    .link-game {
+        margin-top: 2.1vh;
+        color: rgba(255,255,255,.89);
+        font-size: 4.2vh;
+        line-height: 4.9vh;
+        font-weight: 500;
+    }
+    .send-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100vh;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+        }
+    }
+    .bg-wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .ic-img {
+        height: 600px;
+        img {
+            height: 100%;
+        }
+    }
+    .bg-column4 {
+        .bg-wrap {
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ic-img {
+            &:first-of-type {
+                display: flex;
+                align-self: center;
+                img {
+                    align-self: center;
+                    height: 400px;
+                }
+            }
+        }
+    }
+}

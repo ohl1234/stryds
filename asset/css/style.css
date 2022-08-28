@@ -709,3 +709,130 @@ input, select, button, fieldset {
   height: 100%;
   filter: contrast(121%) grayscale(100%);
 }
+
+.sc-send {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.sc-send .send-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding-top: 23.3vh;
+  padding-bottom: 8.9vh;
+}
+.sc-send .send-wrap > * {
+  width: 80%;
+  align-self: center;
+}
+.sc-send .txt-area em {
+  display: block;
+  font-size: 2.1vh;
+  line-height: 2.5vh;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 3.4vh;
+}
+.sc-send .txt-area .sc-title {
+  font-size: 11vh;
+  line-height: 10vh;
+  font-weight: 500;
+  letter-spacing: -0.13vh;
+  color: rgba(255, 255, 255, 0.89);
+}
+.sc-send .txt-area .sc-title span {
+  line-height: 1;
+}
+.sc-send .send-area {
+  display: flex;
+  flex-direction: column;
+}
+.sc-send .send-form {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.sc-send .input-box {
+  display: flex;
+  justify-content: space-between;
+  height: 46px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+}
+.sc-send .input-box input {
+  width: calc(100% - 46px);
+}
+.sc-send .input-box input::-moz-placeholder {
+  font-size: 1.9vh;
+  line-height: 2vh;
+  color: rgba(255, 255, 255, 0.89);
+}
+.sc-send .input-box input:-ms-input-placeholder {
+  font-size: 1.9vh;
+  line-height: 2vh;
+  color: rgba(255, 255, 255, 0.89);
+}
+.sc-send .input-box input::placeholder {
+  font-size: 1.9vh;
+  line-height: 2vh;
+  color: rgba(255, 255, 255, 0.89);
+}
+.sc-send .btn-send {
+  width: 46px;
+  height: 46px;
+  background-image: url(../images/arrow.png);
+  background-repeat: no-repeat;
+  background-size: 27px;
+  background-position: center;
+}
+.sc-send .link-game {
+  margin-top: 2.1vh;
+  color: rgba(255, 255, 255, 0.89);
+  font-size: 4.2vh;
+  line-height: 4.9vh;
+  font-weight: 500;
+}
+.sc-send .send-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  overflow: hidden;
+}
+.sc-send .send-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.sc-send .bg-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.sc-send .ic-img {
+  height: 600px;
+}
+.sc-send .ic-img img {
+  height: 100%;
+}
+.sc-send .bg-column4 .bg-wrap {
+  justify-content: space-between;
+  align-items: center;
+}
+.sc-send .bg-column4 .ic-img:first-of-type {
+  display: flex;
+  align-self: center;
+}
+.sc-send .bg-column4 .ic-img:first-of-type img {
+  align-self: center;
+  height: 400px;
+}
