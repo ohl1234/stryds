@@ -359,3 +359,32 @@ input, select, button, fieldset {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+.sc-you .group-flex1 {
+  position: relative;
+  height: 50vw;
+}
+.sc-you .group-flex1 > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sc-you .group-flex1 .sc-title {
+  z-index: 3;
+  font-size: 24vh;
+  line-height: 21vh;
+  font-weight: 500;
+  letter-spacing: -1.7vh;
+  white-space: nowrap;
+  mix-blend-mode: difference;
+}
+.sc-you .group-flex1 .thumb-box {
+  z-index: 2;
+  width: 500px;
+  height: 500px;
+  opacity: 0.55;
+  background-image: url(../images/card-thumb3.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
