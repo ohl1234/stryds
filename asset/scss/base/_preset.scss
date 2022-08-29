@@ -62,5 +62,10 @@
         margin: 34px 0;
     }
 }
-@include tablet {}
+@include tablet {
+    .line {
+        height: 1px;
+        margin: 21px 0;
+    }
+}
 @include mobile {}

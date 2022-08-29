@@ -296,6 +296,12 @@ input, select, button, fieldset {
     margin: 34px 0;
   }
 }
+@media (max-width: 767px) {
+  .line {
+    height: 1px;
+    margin: 21px 0;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -349,6 +355,9 @@ input, select, button, fieldset {
 }
 .sc-visual .txt-area .visual-desc > span + span {
   margin: 5.5vh 0;
+}
+.sc-visual .txt-area .visual-desc .pc {
+  display: block;
 }
 .sc-visual .txt-area .visual-desc .mobile {
   display: none;
@@ -406,6 +415,34 @@ input, select, button, fieldset {
     height: 1000px;
     order: -1;
     align-self: center;
+  }
+}
+@media (max-width: 767px) {
+  .sc-visual {
+    padding: 144px 34px 0;
+  }
+  .sc-visual .txt-area .sc-title span {
+    font-size: 155px;
+    line-height: 177px;
+    letter-spacing: 0;
+  }
+  .sc-visual .txt-area .visual-desc {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .sc-visual .txt-area .visual-desc .pc {
+    display: none;
+  }
+  .sc-visual .txt-area .visual-desc .mobile {
+    display: block;
+  }
+  .sc-visual .txt-area strong {
+    font-size: 90px;
+    line-height: 100px;
+    letter-spacing: 0;
+  }
+  .sc-visual .txt-area strong.gradient-txt4 {
+    line-height: 100px;
   }
 }
 .sc-you {
@@ -470,6 +507,23 @@ input, select, button, fieldset {
     font-size: 50px;
     line-height: 45px;
     letter-spacing: -1px;
+  }
+}
+@media (max-width: 767px) {
+  .sc-you {
+    padding: 0;
+  }
+  .sc-you .group-flex1 {
+    height: 90vh;
+  }
+  .sc-you .group-flex1 .sc-title {
+    font-size: 110px;
+    line-height: 90px;
+  }
+  .sc-you .group-flex2 .you-desc {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0;
   }
 }
 .sc-app {
@@ -612,6 +666,25 @@ input, select, button, fieldset {
     font-size: 140px;
     line-height: 121px;
     letter-spacing: -5px;
+  }
+  .sc-paragraph .paragraph-wrap1 {
+    padding: 0 34px;
+  }
+  .sc-paragraph .paragraph-wrap2 {
+    padding: 0 34px;
+  }
+}
+@media (max-width: 767px) {
+  .sc-paragraph .vt-line {
+    height: 89px;
+  }
+  .sc-paragraph .paragraph {
+    font-size: 100px;
+    line-height: 90px;
+    letter-spacing: -3px;
+  }
+  .sc-paragraph .paragraph span {
+    display: inline;
   }
   .sc-paragraph .paragraph-wrap1 {
     padding: 0 34px;
@@ -769,7 +842,7 @@ input, select, button, fieldset {
   .sc-feature .feature-tit {
     padding-bottom: 8px;
     font-size: 50px;
-    line-height: 45px;
+    line-height: 50px;
     letter-spacing: -1px;
   }
   .sc-feature .feature-txt {
@@ -778,20 +851,65 @@ input, select, button, fieldset {
   }
   .sc-feature .bar-box {
     position: absolute;
-    left: -16%;
-    bottom: -8.9vh;
-    z-index: 5;
+    left: 36%;
+    right: 0;
+    bottom: 49%;
+    padding-right: 8.9vh;
+    padding-left: 8.9vh;
     transform: rotate(90deg);
-    transform-origin: 100% 100%;
-    padding-left: 0;
   }
   .sc-feature .bar-tit {
-    transform: translate(-75%, -50%);
+    transform: translate(-50%, -50%);
     z-index: 5;
     border: 10px solid #000;
   }
   .sc-feature .tit-shape {
     padding: 21px 34px;
+  }
+  .sc-feature .tit-txt {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .sc-feature .bar-center {
+    height: 21px;
+  }
+}
+@media (max-width: 767px) {
+  .sc-feature {
+    padding: 55px 21px 89px;
+  }
+  .sc-feature .card-box {
+    border-radius: 34px;
+  }
+  .sc-feature .ic-logo {
+    height: 80px;
+  }
+  .sc-feature .ic-logo img {
+    height: 100%;
+  }
+  .sc-feature .feature-tit {
+    padding-bottom: 21px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .sc-feature .feature-txt {
+    font-size: 30px;
+    line-height: 33px;
+  }
+  .sc-feature .bar-box {
+    position: absolute;
+    left: 36%;
+    right: 0;
+    bottom: 49%;
+    padding-right: 8.9vh;
+    padding-left: 8.9vh;
+    transform: rotate(90deg);
+  }
+  .sc-feature .bar-tit {
+    transform: translate(-50%, -50%);
+  }
+  .sc-feature .tit-shape {
+    padding: 13px 34px;
   }
   .sc-feature .tit-txt {
     font-size: 20px;
@@ -892,6 +1010,29 @@ input, select, button, fieldset {
     letter-spacing: -1px;
   }
 }
+@media (max-width: 767px) {
+  .sc-together .group-flex3 .sc-title {
+    font-size: 110px;
+    line-height: 90px;
+  }
+  .sc-together .group-flex3 .together-bg.mobile {
+    display: block;
+  }
+  .sc-together .group-flex3 .together-bg.pc {
+    display: none;
+  }
+  .sc-together .group-flex3 .ic-img {
+    height: 225px;
+  }
+  .sc-together .group-flex4 {
+    height: auto;
+  }
+  .sc-together .group-flex4 .together-desc {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0;
+  }
+}
 .sc-story {
   position: relative;
   display: flex;
@@ -945,6 +1086,16 @@ input, select, button, fieldset {
   }
   .sc-story .link-story {
     height: 60vh;
+  }
+}
+@media (max-width: 767px) {
+  .sc-story .sc-title {
+    padding: 0 34px 34px 34px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .sc-story .link-story {
+    height: 50vh;
   }
 }
 .sc-send {
@@ -1093,7 +1244,7 @@ input, select, button, fieldset {
     height: 60px;
   }
   .sc-send .input-box input {
-    width: calc(100% - 46px);
+    width: calc(100% - 60px);
   }
   .sc-send .input-box input::-moz-placeholder {
     font-size: 16px;
@@ -1116,5 +1267,32 @@ input, select, button, fieldset {
     margin-top: 21px;
     font-size: 34px;
     line-height: 37px;
+  }
+}
+@media (max-width: 767px) {
+  .sc-send .txt-area em {
+    font-size: 19px;
+    line-height: 23px;
+  }
+  .sc-send .txt-area .sc-title {
+    font-size: 40px;
+    line-height: 42px;
+  }
+  .sc-send .input-box {
+    height: 34px;
+  }
+  .sc-send .input-box input {
+    width: calc(100% - 46px);
+  }
+  .sc-send .btn-send {
+    width: 34px;
+    height: 34px;
+    background-size: 21px 15px;
+    background-position: top 3px;
+  }
+  .sc-send .link-game {
+    margin-top: 13px;
+    font-size: 30px;
+    line-height: 33px;
   }
 }
