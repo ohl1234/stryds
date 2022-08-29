@@ -445,6 +445,24 @@ input, select, button, fieldset {
     line-height: 100px;
   }
 }
+@media (max-width: 479px) {
+  .sc-visual .txt-area .sc-title span {
+    font-size: 110px;
+    line-height: 126px;
+    letter-spacing: 0;
+  }
+  .sc-visual .txt-area .visual-desc {
+    font-size: 55px;
+    line-height: 50px;
+  }
+  .sc-visual .txt-area strong {
+    line-height: 90px;
+    letter-spacing: 0;
+  }
+  .sc-visual .txt-area strong.gradient-txt4 {
+    line-height: 90px;
+  }
+}
 .sc-you {
   width: 100vw;
   padding: 5.5vh;
@@ -526,6 +544,19 @@ input, select, button, fieldset {
     letter-spacing: 0;
   }
 }
+@media (max-width: 479px) {
+  .sc-you .group-flex1 .sc-title {
+    font-size: 80px;
+    line-height: 70px;
+    letter-spacing: -1px;
+  }
+  .sc-you .group-flex1 .thumb-box {
+    width: 100%;
+  }
+  .sc-you .group-flex2 {
+    padding: 34px 21px;
+  }
+}
 .sc-app {
   display: flex;
   justify-content: center;
@@ -586,27 +617,28 @@ input, select, button, fieldset {
     height: 633px;
   }
   .sc-app .device-item.item2 {
-    z-index: 4;
-    margin-top: -400px;
-  }
-  .sc-app .device-item.item2 .mockup {
-    width: 390px;
-  }
-  .sc-app .device-item.item2 .app-display {
-    width: 330px;
-    height: 727px;
-    padding-top: 10px;
-  }
-  .sc-app .device-item.item3 {
+    order: 1;
     z-index: 5;
     margin-top: -450px;
   }
-  .sc-app .device-item.item3 .mockup {
+  .sc-app .device-item.item2 .mockup {
     width: 437px;
   }
-  .sc-app .device-item.item3 .app-display {
+  .sc-app .device-item.item2 .app-display {
     width: 365px;
     height: 814px;
+    padding-top: 10px;
+  }
+  .sc-app .device-item.item3 {
+    z-index: 4;
+    margin-top: -400px;
+  }
+  .sc-app .device-item.item3 .mockup {
+    width: 390px;
+  }
+  .sc-app .device-item.item3 .app-display {
+    width: 330px;
+    height: 727px;
     padding-top: 10px;
   }
   .sc-app .mockup {
@@ -616,6 +648,45 @@ input, select, button, fieldset {
     width: auto;
     height: auto;
     border-radius: 40px;
+  }
+}
+@media (max-width: 479px) {
+  .sc-app {
+    padding: 89px 0;
+  }
+  .sc-app .device-list {
+    width: 100vw;
+    flex-direction: column;
+  }
+  .sc-app .device-item.item1 .mockup {
+    width: 250px;
+  }
+  .sc-app .device-item.item1 .app-display {
+    width: 200px;
+    height: 460px;
+    padding: 0;
+  }
+  .sc-app .device-item.item2 {
+    margin-top: -300px;
+  }
+  .sc-app .device-item.item2 .mockup {
+    width: 313px;
+  }
+  .sc-app .device-item.item2 .app-display {
+    width: 260px;
+    height: 590px;
+    padding-top: 10px;
+  }
+  .sc-app .device-item.item3 {
+    margin-top: -300px;
+  }
+  .sc-app .device-item.item3 .mockup {
+    width: 280px;
+  }
+  .sc-app .device-item.item3 .app-display {
+    width: 240px;
+    height: 520px;
+    padding-top: 0;
   }
 }
 .sc-paragraph {
@@ -685,6 +756,22 @@ input, select, button, fieldset {
   }
   .sc-paragraph .paragraph span {
     display: inline;
+  }
+  .sc-paragraph .paragraph-wrap1 {
+    padding: 0 34px;
+  }
+  .sc-paragraph .paragraph-wrap2 {
+    padding: 0 34px;
+  }
+}
+@media (max-width: 479px) {
+  .sc-paragraph .vt-line {
+    height: 144px;
+  }
+  .sc-paragraph .paragraph {
+    font-size: 67px;
+    line-height: 68px;
+    letter-spacing: -1px;
   }
   .sc-paragraph .paragraph-wrap1 {
     padding: 0 34px;
@@ -906,7 +993,7 @@ input, select, button, fieldset {
     transform: rotate(90deg);
   }
   .sc-feature .bar-tit {
-    transform: translate(-50%, -50%);
+    border: 10px solid #000;
   }
   .sc-feature .tit-shape {
     padding: 13px 34px;
@@ -917,6 +1004,48 @@ input, select, button, fieldset {
   }
   .sc-feature .bar-center {
     height: 21px;
+  }
+}
+@media (max-width: 479px) {
+  .sc-feature .card-box {
+    border-radius: 34px;
+  }
+  .sc-feature .ic-logo {
+    height: 70px;
+  }
+  .sc-feature .feature-tit {
+    padding-bottom: 13px;
+    font-size: 43px;
+    line-height: 39px;
+  }
+  .sc-feature .feature-txt {
+    font-size: 21px;
+    line-height: 23px;
+  }
+  .sc-feature .txt-box {
+    margin-top: 55px;
+  }
+  .sc-feature .bar-box {
+    position: absolute;
+    left: 10%;
+    right: 0;
+    bottom: 49%;
+    width: 150%;
+    padding: 0;
+    transform: rotate(90deg);
+  }
+  .sc-feature .bar-tit {
+    border: 6px solid #000;
+  }
+  .sc-feature .tit-shape {
+    padding: 8px 21px;
+  }
+  .sc-feature .tit-txt {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .sc-feature .bar-center {
+    height: 13px;
   }
 }
 .sc-together {
@@ -1033,6 +1162,15 @@ input, select, button, fieldset {
     letter-spacing: 0;
   }
 }
+@media (max-width: 479px) {
+  .sc-together .group-flex3 .sc-title {
+    font-size: 80px;
+    line-height: 70px;
+  }
+  .sc-together .group-flex4 {
+    padding: 34px 21px;
+  }
+}
 .sc-story {
   position: relative;
   display: flex;
@@ -1096,6 +1234,17 @@ input, select, button, fieldset {
   }
   .sc-story .link-story {
     height: 50vh;
+  }
+}
+@media (max-width: 479px) {
+  .sc-story .sc-title {
+    padding: 0 21px 21px 21px;
+    font-size: 43px;
+    line-height: 39px;
+    letter-spacing: 0;
+  }
+  .sc-story .link-story {
+    height: 40vh;
   }
 }
 .sc-send {
@@ -1294,5 +1443,16 @@ input, select, button, fieldset {
     margin-top: 13px;
     font-size: 30px;
     line-height: 33px;
+  }
+}
+@media (max-width: 479px) {
+  .sc-send .txt-area em {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .sc-send .link-game {
+    margin-top: 13px;
+    font-size: 21px;
+    line-height: 23px;
   }
 }

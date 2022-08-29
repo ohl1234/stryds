@@ -130,7 +130,30 @@
     }
 }
 
-@include mobile {}
+@include mobile {
+    .sc-visual {
+        .txt-area {
+            .sc-title {
+                span{
+                    font-size: 110px;
+                    line-height: 126px;
+                    letter-spacing: 0;
+                }
+            }
+            .visual-desc {
+                font-size: 55px;
+                line-height: 50px;
+            }
+            strong{
+                line-height: 90px;
+                letter-spacing: 0;
+                &.gradient-txt4{
+                    line-height: 90px;
+                }
+            }
+        }
+    }
+}
 // sc-visual responsive end
 
 .sc-you {
@@ -216,7 +239,23 @@
         }
     }
 }
-@include mobile {}
+@include mobile {
+    .sc-you {
+        .group-flex1 {
+            .sc-title{
+                font-size: 80px;
+                line-height: 70px;
+                letter-spacing: -1px;
+            }
+            .thumb-box {
+                width: 100%;
+            }
+        }
+        .group-flex2 {
+            padding: 34px 21px;
+        }
+    }
+}
 // sc-you responsive end
 
 .sc-app{
@@ -280,18 +319,7 @@
                 }
             }
             &.item2 {
-                z-index: 4;
-                margin-top: -400px;
-                .mockup {
-                    width: 390px;
-                }
-                .app-display {
-                    width: 330px;
-                    height: 727px;
-                    padding-top: 10px;
-                }
-            }
-            &.item3 {
+                order: 1;
                 z-index: 5;
                 margin-top: -450px;
                 .mockup {
@@ -300,6 +328,18 @@
                 .app-display {
                     width: 365px;
                     height: 814px;
+                    padding-top: 10px;
+                }
+            }
+            &.item3 {
+                z-index: 4;
+                margin-top: -400px;
+                .mockup {
+                    width: 390px;
+                }
+                .app-display {
+                    width: 330px;
+                    height: 727px;
                     padding-top: 10px;
                 }
             }
@@ -315,7 +355,49 @@
     }
     
 }
-@include mobile {}
+@include mobile {
+    .sc-app{
+        padding: 89px 0;
+        .device-list {
+            width: 100vw;
+            flex-direction: column;
+        }
+        .device-item {
+            &.item1 {
+                .mockup {
+                    width: 250px;
+                }
+                .app-display {
+                    width: 200px;
+                    height: 460px;
+                    padding: 0;
+                }
+            }
+            &.item2 {
+                margin-top: -300px;
+                .mockup {
+                    width: 313px;
+                }
+                .app-display {
+                    width: 260px;
+                    height: 590px;
+                    padding-top: 10px;
+                }
+            }
+            &.item3 {
+                margin-top: -300px;
+                .mockup {
+                    width: 280px;
+                }
+                .app-display {
+                    width: 240px;
+                    height: 520px;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
 // sc-app responsive end
 
 .sc-paragraph {
@@ -402,7 +484,24 @@
         }
     }
 }
-@include mobile {}
+@include mobile {
+    .sc-paragraph {
+        .vt-line{
+            height: 144px;
+        }
+        .paragraph{
+            font-size: 67px;
+            line-height: 68px;
+            letter-spacing: -1px;
+        }
+        .paragraph-wrap1 {
+            padding: 0 34px;
+        }
+        .paragraph-wrap2 {
+            padding: 0 34px;
+        }
+    }
+}
 // sc-paragraph end
 
 .sc-feature {
@@ -619,7 +718,7 @@
             transform: rotate(90deg);
         }
         .bar-tit {
-            transform: translate(-50%, -50%);
+            border: 10px solid #000;
         }
         .tit-shape {
             padding: 13px 34px;
@@ -635,7 +734,52 @@
     }
     
 }
-@include mobile {}
+@include mobile {
+    .sc-feature {
+        .card-box {
+            border-radius: 34px;
+        }
+        .ic-logo {
+            height: 70px;
+        }
+        .feature-tit {
+            padding-bottom: 13px;
+            font-size: 43px;
+            line-height: 39px;
+        }
+        .feature-txt {
+            font-size: 21px;
+            line-height: 23px;
+        }
+        .txt-box {
+            margin-top: 55px;
+        }
+        .bar-box {
+            position: absolute;
+            left: 10%;
+            right: 0;
+            bottom: 49%;
+            width: 150%;
+            padding: 0;
+            transform: rotate(90deg);
+        }
+        .bar-tit {
+            border: 6px solid #000;
+            
+        }
+        .tit-shape {
+            padding: 8px 21px;
+            
+        }
+        .tit-txt {
+            font-size: 16px;
+            line-height: 18px;
+        }
+        .bar-center {
+            height: 13px;
+        }
+    }
+}
 // sc-feature responsive end
 
 .sc-together {
@@ -762,7 +906,19 @@
         }
     }
 }
-@include mobile {}
+@include mobile {
+    .sc-together {
+        .group-flex3 {
+            .sc-title {
+                font-size: 80px;
+                line-height: 70px;
+            }
+        }
+        .group-flex4 {
+            padding: 34px 21px;
+        }
+    }
+}
 // sc-together responsive end
 
 .sc-story {
@@ -836,7 +992,19 @@
         }
     }
 }
-@include mobile {}
+@include mobile {
+    .sc-story {
+        .sc-title {
+            padding: 0 21px 21px 21px;
+            font-size: 43px;
+            line-height: 39px;
+            letter-spacing: 0;
+        }
+        .link-story {
+            height: 40vh;
+        }
+    }
+}
 // sc-story responsive end
 
 .sc-send {
@@ -1038,5 +1206,19 @@
         }
     }
 }
-@include mobile {}
+@include mobile {
+    .sc-send {
+        .txt-area {
+            em {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+        .link-game {
+            margin-top: 13px;
+            font-size: 21px;
+            line-height: 23px;
+        }
+    }
+}
 // sc-story responsive end
