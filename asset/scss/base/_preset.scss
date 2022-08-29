@@ -31,13 +31,6 @@
     @include gradi-Green;
     @include clip-Text;
 }
-
-.line {
-    display: inline-block;
-    width: 100%;
-    height: 0.2vh;
-    margin: 5.5vh 0;
-}
 .gradient-line1 {
     @include gradi-Blue1;
 }
@@ -56,3 +49,18 @@
 .gradient-line6 {
     @include gradi-Green;
 }
+.line {
+    display: inline-block;
+    width: 100%;
+    height: 0.2vh;
+    margin: 5.5vh 0;
+}
+
+@include laptop {
+    .line {
+        height: 1.5px;
+        margin: 34px 0;
+    }
+}
+@include tablet {}
+@include mobile {}

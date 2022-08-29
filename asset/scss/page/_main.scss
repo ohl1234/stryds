@@ -46,7 +46,7 @@
         position: absolute;
         top:-25%;
         right: 0;
-        width: 400px;
+        width: 379px;
         height: 100%;
         background-image: url(../images/visual.png);
         background-repeat: no-repeat;
@@ -54,12 +54,57 @@
     }
 }
 
+// sc-visual responsive start
+@include laptop {
+    .sc-visual {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        padding: 144px 55px 0;
+        .txt-area {
+            .sc-title {
+                span{
+                    font-size: 200px;
+                    line-height: 223px;
+                    letter-spacing: -3px;
+                }
+            }
+            .visual-desc {
+                font-size: 50px;
+                line-height: 45px;
+                letter-spacing: -1px;
+            }
+            strong{
+                height: auto;
+                font-size: 144px;
+                line-height: 155px;
+                letter-spacing: -3px;
+                &.gradient-txt4{
+                    line-height: 155px;
+                }
+            }
+        }
+        .thumb-area {
+            position: static;
+            width: 316px;
+            height: 1000px;
+            order: -1;
+            align-self: center;
+        }
+    }
+}
+
+@include tablet {}
+
+@include mobile {}
+// sc-visual responsive end
+
 .sc-you {
     width: 100vw;
     padding: 5.5vh;
     .group-flex1 {
         position: relative;
-        height: 50vw;
+        height: 100vh;
         & > * {
             @include position-Center;
         }
@@ -79,7 +124,7 @@
             opacity: .55;
             background-image: url(../images/card-thumb3.png);
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: contain;
         }
     }
     .group-flex2 {
@@ -97,6 +142,31 @@
     }
 }
 
+// sc-you responsive start
+@include laptop {
+    .sc-you {
+        padding: 0;
+        .group-flex1 {
+            .sc-title{
+                font-size: 150px;
+                line-height: 120px;
+            }
+        }
+        .group-flex2 {
+            padding: 55px 34px;
+            align-items: flex-start;
+            .you-desc{
+                font-size: 50px;
+                line-height: 45px;
+                letter-spacing: -1px;
+            }
+        }
+    }
+}
+@include tablet {}
+@include mobile {}
+// sc-you responsive end
+
 .sc-app{
     display: flex;
     justify-content: center;
@@ -104,8 +174,7 @@
     overflow: hidden;
     width: 100vw;
     height: 100%;
-    padding-top: 14.4vh;
-    padding-bottom: 14.4vh;
+    padding: 14.4vh 0;
     background-color: #0e0e0e;
     .device-list {
         display: flex;
@@ -139,6 +208,65 @@
     }
 }
 
+// sc-app responsive start
+@include laptop {
+    .sc-app{
+        padding: 144px 0;
+        .device-list {
+            width: 100vw;
+            flex-direction: column;
+        }
+        .device-item {
+            &.item1 {
+                z-index: 3;
+                .mockup {
+                    width: 350px;
+                }
+                .app-display {
+                    width: 295px;
+                    height: 633px;
+                }
+            }
+            &.item2 {
+                z-index: 4;
+                margin-top: -400px;
+                .mockup {
+                    width: 390px;
+                }
+                .app-display {
+                    width: 330px;
+                    height: 727px;
+                    padding-top: 10px;
+                }
+            }
+            &.item3 {
+                z-index: 5;
+                margin-top: -450px;
+                .mockup {
+                    width: 437px;
+                }
+                .app-display {
+                    width: 365px;
+                    height: 814px;
+                    padding-top: 10px;
+                }
+            }
+        }
+        .mockup {
+            width: auto;
+        }
+        .app-display{
+            width: auto;
+            height: auto;
+            border-radius: 40px;
+        }
+    }
+    
+}
+@include tablet {}
+@include mobile {}
+// sc-app responsive end
+
 .sc-paragraph {
     width: 100vw;
     .line-wrap{
@@ -160,6 +288,7 @@
     }
     .paragraph-wrap1 {
         padding: 0 5.5vh;
+        background-color: #01000e;
         .vt-line {
             background-color: rgba(255,255,255,.89);
         }
@@ -180,6 +309,30 @@
         }
     }
 }
+
+// sc-paragraph responsive start
+@include laptop {
+    .sc-paragraph {
+        .vt-line{
+            width: 1px;
+            height: 100px;
+        }
+        .paragraph{
+            font-size: 140px;
+            line-height: 121px;
+            letter-spacing: -5px;
+        }
+        .paragraph-wrap1 {
+            padding: 0 34px;
+        }
+        .paragraph-wrap2 {
+            padding: 0 34px;
+        }
+    }
+}
+@include tablet {}
+@include mobile {}
+// sc-paragraph end
 
 .sc-feature {
     width: 100vw;
@@ -308,8 +461,72 @@
     }
 }
 
+// sc-feature responsive start
+@include laptop {
+    .sc-feature {
+        padding: 89px 34px 144px;
+        .feature-card {
+            width: 100%;
+            padding: 55px 0 55px 55px;
+        }
+        .card-box {
+            flex-direction: column;
+            margin-bottom: 34px;
+            border-radius: 55px;
+        }
+        .txt-box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 89px;
+        }
+        .feature-tit {
+            padding-bottom: 8px;
+            font-size: 50px;
+            line-height: 45px;
+            letter-spacing: -1px;
+        }
+        .feature-txt {
+            font-size: 34px;
+            line-height: 37px;
+        }
+        .bar-box {
+            position: absolute;
+            left: -16%;
+            bottom: -8.9vh;
+            z-index: 5;
+            transform: rotate(90deg);
+            transform-origin: 100% 100%;
+            padding-left: 0;
+        }
+        .bar-tit {
+            transform: translate(-75%, -50%);
+            z-index: 5;
+            border: 10px solid #000;
+        }
+        .tit-shape {
+            padding: 21px 34px;
+            
+        }
+        .tit-txt {
+            font-size: 20px;
+            line-height: 27px;
+        }
+        .bar-center {
+            height: 21px;
+        }
+    }
+    
+}
+@include tablet {}
+@include mobile {}
+// sc-feature responsive end
+
 .sc-together {
     width: 100vw;
+    overflow: hidden;
+    & > * {
+        width: 100vw;
+    }
     .group-flex3 {
         position: relative;
         &::before {
@@ -360,6 +577,49 @@
     }
 }
 
+// sc-together responsive start
+@include laptop {
+    .sc-together {
+        .group-flex3 {
+            .sc-title {
+                font-size: 150px;
+                line-height: 126px;
+                letter-spacing: -6px;
+            }
+            .together-bg {
+                &.mobile {
+                    display: block;
+                }
+                &.pc {
+                    display: none;
+                }
+            }
+            .bg-wrap {
+                display: flex;
+            }
+            .ic-img {
+                height: 240px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .group-flex4 {
+            padding: 55px 34px;
+            align-items: flex-start;
+            .together-desc {
+                font-size: 50px;
+                line-height: 45px;
+                letter-spacing: -1px;
+            }
+        }
+    }
+}
+@include tablet {}
+@include mobile {}
+// sc-together responsive end
+
 .sc-story {
     position: relative;
     display: flex;
@@ -372,9 +632,7 @@
         left: 0;
         z-index: 3;
         width: 100%;
-        padding-right: 5.5vh;
-        padding-bottom: 7vh;
-        padding-left: 5.5vh;
+        padding: 0 5.5vh 7vh 5.5vh;
         color: #232323;
         font-size: 11vh;
         line-height: 9vh;
@@ -400,10 +658,31 @@
             height: 100%;
             -webkit-filter: contrast(121%) grayscale(100%);
             filter: contrast(121%) grayscale(100%);
-        ;
         }
     }
 }
+
+// sc-story responsive start
+@include laptop {
+    .sc-story {
+        .sc-title {
+            padding: 0 55px 34px 55px;
+            font-size: 50px;
+            line-height: 45px;
+            letter-spacing: -1px;
+            .tit-line {
+                height: 1px;
+            }
+        }
+        .link-story {
+            height: 60vh;
+        }
+    }
+    
+}
+@include tablet {}
+@include mobile {}
+// sc-story responsive end
 
 .sc-send {
     position: relative;
@@ -497,7 +776,7 @@
             display: inline-block;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,.8);
+            background-color: rgba(0,0,0,.89);
         }
     }
     .bg-wrap {
@@ -528,3 +807,50 @@
         }
     }
 }
+
+// sc-story responsive start
+@include laptop {
+    .sc-send {
+        .send-wrap {
+            padding-top: 233px;
+            padding-bottom: 89px;
+        }
+        .txt-area {
+            em {
+                font-size: 21px;
+                line-height: 25px;
+                margin-bottom: 21px;
+            }
+            .sc-title {
+                font-size: 50px;
+                line-height: 50px;
+                letter-spacing: -1px;
+            }
+        }
+        .input-box {
+            height: 60px;
+            input {
+                width: calc(100% - 46px);
+                &::placeholder {
+                    font-size: 16px;
+                    line-height: 17px;
+                }
+            }
+        }
+        .btn-send {
+            width: 60px;
+            height: 60px;
+            background-size: 22px;
+    
+        }
+        .link-game {
+            margin-top: 21px;
+            font-size: 34px;
+            line-height: 37px;
+        }
+    }
+    
+}
+@include tablet {}
+@include mobile {}
+// sc-story responsive end

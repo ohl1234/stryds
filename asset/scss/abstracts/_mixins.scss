@@ -51,3 +51,27 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
+// responsive
+
+$laptop:991px;
+$tablet:767px;
+$moblie:479px;
+
+@mixin mobile {
+    @media (max-width:$moblie){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width:$tablet){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width:$laptop){
+        @content;
+    }
+}

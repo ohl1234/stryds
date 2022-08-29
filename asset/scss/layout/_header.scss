@@ -11,3 +11,17 @@
     -webkit-backdrop-filter: blur(13px);
     backdrop-filter: blur(13px);
 }
+
+// header responsive start
+@include laptop {
+    .header {
+        padding: 21px;
+    }
+}
+@include tablet {
+    .header {
+        padding: 13px;
+    }
+}
+@include mobile {}
+// header responsive end
