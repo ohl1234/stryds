@@ -215,6 +215,23 @@ input, select, button, fieldset {
   margin: -1px;
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+.loading .gradient-line1 {
+  width: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .gradient-txt1 {
   background-image: linear-gradient(90deg, #0082f3, #0ef0ea);
   filter: saturate(150%);
@@ -306,7 +323,7 @@ input, select, button, fieldset {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -338,11 +355,18 @@ input, select, button, fieldset {
   flex-direction: column;
   justify-content: center;
 }
-.sc-visual .txt-area .sc-title span {
+.sc-visual .txt-area .sc-title {
+  overflow: hidden;
+}
+.sc-visual .txt-area .sc-title .tit-msg {
+  display: inline-block;
   font-size: 34.2vh;
   line-height: 31.1vh;
   font-weight: 500;
   letter-spacing: -0.7vh;
+}
+.sc-visual .txt-area .sc-title .tit-msg:first-of-type {
+  vertical-align: -20px;
 }
 .sc-visual .txt-area .visual-desc {
   font-size: 11vh;
@@ -363,11 +387,15 @@ input, select, button, fieldset {
   display: none;
 }
 .sc-visual .txt-area strong {
+  display: inline-block;
   font-size: 34.2vh;
   height: 31.1vh;
   line-height: 40vh;
   font-weight: 500;
   letter-spacing: -0.7vh;
+}
+.sc-visual .txt-area strong.gradient-txt3 {
+  align-self: flex-end;
 }
 .sc-visual .txt-area strong.gradient-txt4 {
   line-height: 33.8vh;

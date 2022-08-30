@@ -9,11 +9,16 @@
         flex-direction: column;
         justify-content: center;
         .sc-title {
-            span{
+            overflow: hidden;
+            .tit-msg{
+                display: inline-block;
                 font-size: 34.2vh;
                 line-height: 31.1vh;
                 font-weight: 500;
                 letter-spacing: -.7vh;
+                &:first-of-type {
+                    vertical-align: -20px;
+                }
             }
         }
         .visual-desc {
@@ -35,11 +40,15 @@
             }
         }
         strong{
+            display: inline-block;
             font-size: 34.2vh;
             height: 31.1vh;
             line-height: 40vh;
             font-weight: 500;
             letter-spacing: -.7vh;
+            &.gradient-txt3 {
+                align-self: flex-end;
+            }
             &.gradient-txt4{
                 line-height: 33.8vh;
             }

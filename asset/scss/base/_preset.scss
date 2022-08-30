@@ -7,6 +7,20 @@
     margin: -1px;
 }
 
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    .gradient-line1 {
+        width: 0;
+        @include position-Center;
+    }
+}
+
 .gradient-txt1 {
     @include gradi-Blue1;
     @include clip-Text;
