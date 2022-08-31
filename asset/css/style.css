@@ -225,7 +225,7 @@ input, select, button, fieldset {
   background-color: #000;
 }
 .loading .gradient-line1 {
-  width: 0;
+  width: 30vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -275,38 +275,23 @@ input, select, button, fieldset {
   color: transparent;
 }
 
-.gradient-line1 {
-  background-image: linear-gradient(90deg, #0082f3, #0ef0ea);
-  filter: saturate(150%);
+@-webkit-keyframes rolling {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-.gradient-line2 {
-  background-image: linear-gradient(90deg, #05cafe, #2f32cf);
+@keyframes rolling {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
-
-.gradient-line3 {
-  background-image: linear-gradient(90deg, #e400ff, #f50d5b);
-}
-
-.gradient-line4 {
-  background-image: linear-gradient(90deg, #e4f12e, #56db63);
-}
-
-.gradient-line5 {
-  background-image: linear-gradient(90deg, #bd039f, #9460e4);
-}
-
-.gradient-line6 {
-  background-image: linear-gradient(90deg, #04fccb, #40fd8f);
-}
-
-.line {
-  display: inline-block;
-  width: 100%;
-  height: 0.2vh;
-  margin: 5.5vh 0;
-}
-
 @media (max-width: 991px) {
   .line {
     height: 1.5px;
@@ -319,6 +304,51 @@ input, select, button, fieldset {
     margin: 21px 0;
   }
 }
+.line {
+  display: flex;
+  width: 100%;
+  height: 0.2vh;
+  margin: 5.5vh 0;
+}
+.line .guage {
+  width: inherit;
+  height: inherit;
+}
+.line.end {
+  justify-content: flex-end;
+}
+.line.start {
+  justify-content: flex-start;
+}
+.line.center {
+  justify-content: center;
+}
+
+.gradient-line1 > * {
+  background-image: linear-gradient(90deg, #0082f3, #0ef0ea);
+  filter: saturate(150%);
+}
+
+.gradient-line2 > * {
+  background-image: linear-gradient(90deg, #05cafe, #2f32cf);
+}
+
+.gradient-line3 > * {
+  background-image: linear-gradient(90deg, #e400ff, #f50d5b);
+}
+
+.gradient-line4 > * {
+  background-image: linear-gradient(90deg, #e4f12e, #56db63);
+}
+
+.gradient-line5 > * {
+  background-image: linear-gradient(90deg, #bd039f, #9460e4);
+}
+
+.gradient-line6 > * {
+  background-image: linear-gradient(90deg, #04fccb, #40fd8f);
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -405,7 +435,7 @@ input, select, button, fieldset {
   top: -25%;
   right: 0;
   width: 379px;
-  height: 100%;
+  height: 1200px;
   background-image: url(../images/visual.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1357,15 +1387,27 @@ input, select, button, fieldset {
   line-height: 4.9vh;
   font-weight: 500;
 }
-.sc-send .send-bg {
+.sc-send .send-bg-wrap {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   display: flex;
-  flex-wrap: nowrap;
+  width: 100%;
   height: 100vh;
-  overflow: hidden;
+  -webkit-animation: rolling 20s infinite linear;
+          animation: rolling 20s infinite linear;
+}
+.sc-send .send-bg {
+  position: relative;
+  display: flex;
+  flex: 1 0 100%;
+}
+.sc-send .send-bg > * {
+  flex: 1;
+}
+.sc-send .send-bg .ic-img {
+  flex-basis: 50%;
 }
 .sc-send .send-bg::before {
   content: "";
@@ -1382,24 +1424,6 @@ input, select, button, fieldset {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-.sc-send .ic-img {
-  height: 600px;
-}
-.sc-send .ic-img img {
-  height: 100%;
-}
-.sc-send .bg-column4 .bg-wrap {
-  justify-content: space-between;
-  align-items: center;
-}
-.sc-send .bg-column4 .ic-img:first-of-type {
-  display: flex;
-  align-self: center;
-}
-.sc-send .bg-column4 .ic-img:first-of-type img {
-  align-self: center;
-  height: 400px;
 }
 
 @media (max-width: 991px) {

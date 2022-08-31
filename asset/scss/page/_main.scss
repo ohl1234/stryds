@@ -29,7 +29,7 @@
             &  > span{
                 display: block;
                 & + span{
-                    margin: 5.5vh 0;
+                    margin-top: 5.5vh;
                 }
             }
             .pc {
@@ -59,7 +59,7 @@
         top:-25%;
         right: 0;
         width: 379px;
-        height: 100%;
+        height: 1200px;
         background-image: url(../images/visual.png);
         background-repeat: no-repeat;
         background-size: 100%;
@@ -1090,15 +1090,28 @@
         line-height: 4.9vh;
         font-weight: 500;
     }
-    .send-bg {
+    .send-bg-wrap{
         position: absolute;
         top: 0;
         left: 0;
+        // 배경이니까 absolute
         z-index: -1;
         display: flex;
-        flex-wrap: nowrap;
+        width: 100%;
         height: 100vh;
-        overflow: hidden;
+        animation: rolling 20s infinite linear;
+        //overflow: hidden;
+    }
+    .send-bg {
+        position: relative;
+        display: flex;
+        flex: 1 0 100%;
+        & > * {
+            flex: 1;
+        }
+        .ic-img {
+            flex-basis: 50%;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -1116,28 +1129,22 @@
         flex-direction: column;
         height: 100%;
     }
-    .ic-img {
-        height: 600px;
-        img {
-            height: 100%;
-        }
-    }
-    .bg-column4 {
-        .bg-wrap {
-            justify-content: space-between;
-            align-items: center;
-        }
-        .ic-img {
-            &:first-of-type {
-                display: flex;
-                align-self: center;
-                img {
-                    align-self: center;
-                    height: 400px;
-                }
-            }
-        }
-    }
+    // .bg-column4 {
+    //     .bg-wrap {
+    //         justify-content: space-between;
+    //         align-items: center;
+    //     }
+    //     .ic-img {
+    //         &:first-of-type {
+    //             display: flex;
+    //             align-self: center;
+    //             img {
+    //                 align-self: center;
+    //                 height: 400px;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 // sc-story responsive start

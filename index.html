@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class="loading">
-        <div class="line gradient-line1"></div>
+        <div class="line gradient-line1 end">
+            <div class="guage"></div>
+        </div>
     </div>
     <header class="header">
         <div class="logo-area">
@@ -19,8 +21,7 @@
             </h1>
         </div>
         <div class="mail-area">
-            <a href="mailto:hey@stryds.com">
-                <span class="blind">send email</span>
+            <a href="mailto:hey@stryds.com" aria-label="send email">
                 <svg display="block" width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>email-evelope-v2</title>
                     <g id="design-v4" stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-opacity="0.55">
@@ -45,18 +46,29 @@
                     <span class="tit-msg">d</span>
                     <span class="tit-msg">s</span>
                 </h2>
-                <div class="line gradient-line6"></div>
+                <div class="line gradient-line6 end">
+                    <div class="guage"></div>
+                </div>
                 <p class="visual-desc">
                     <span class="desc-txt1">We're <span class="gradient-txt1">all</span> in</span>
                     <span class="desc-txt2 pc">Health + Wellness + Accountability.</span>
                     <span class="desc-txt2 mobile">Health / Wellness / Accountability.</span>
                 </p>
+                <div class="line gradient-line1 start">
+                    <div class="guage"></div>
+                </div>
                 <strong class="gradient-txt2">Mind</strong>
-                <div class="line gradient-line2"></div>
+                <div class="line gradient-line2 end">
+                    <div class="guage"></div>
+                </div>
                 <strong class="gradient-txt3">Heart</strong>
-                <div class="line gradient-line3"></div>
+                <div class="line gradient-line3 start">
+                    <div class="guage"></div>
+                </div>
                 <strong class="gradient-txt4">Body</strong>
-                <div class="line gradient-line4"></div>
+                <div class="line gradient-line4 end">
+                    <div class="guage"></div>
+                </div>
             </div>
             <figure class="thumb-area"></figure>
         </section>
@@ -66,15 +78,25 @@
                 <figure class="thumb-box"></figure>
             </div>
             <div class="group-flex2">
-                <div class="line gradient-line2"></div>
+                <div class="line gradient-line2">
+                    <div class="guage"></div>
+                </div>
                 <p class="you-desc desc1">Evidence-based <span class="gradient-txt1">science</span></p>
-                <div class="line gradient-line1"></div>
+                <div class="line gradient-line1">
+                    <div class="guage"></div>
+                </div>
                 <p class="you-desc desc2">Cutting-edge <span class="gradient-txt1">technology</span></p>
-                <div class="line gradient-line3"></div>
+                <div class="line gradient-line3">
+                    <div class="guage"></div>
+                </div>
                 <p class="you-desc desc3">State-of-the-art <span class="gradient-txt1">design</span></p>
-                <div class="line gradient-line5"></div>
+                <div class="line gradient-line5">
+                    <div class="guage"></div>
+                </div>
                 <p class="you-desc desc4">Life changing <span class="gradient-txt1">experience</span></p>
-                <div class="line gradient-line4"></div>
+                <div class="line gradient-line4">
+                    <div class="guage"></div>
+                </div>
             </div>
         </section>
         <section class="sc-app">
@@ -253,7 +275,8 @@
         <section class="sc-together">
             <div class="group-flex3">
                 <h2 class="sc-title">It's all<br>coming<br><span class="gradient-txt1">together</span>.</h2>
-                <div class="together-bg pc">
+                <canvas id="canvas"></canvas>
+                <!-- <div class="together-bg pc">
                     <div class="bg-top">
                         <div class="bg-wrap">
                             <i class="ic-img">
@@ -410,18 +433,28 @@
                             </i>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="group-flex4">
-                <div class="line gradient-line2"></div>
+                <div class="line gradient-line2">
+                    <div class="guage"></div>
+                </div>
                 <p class="together-desc desc1">We're breaking the <span class="gradient-txt1">mold</span>.</p>
-                <div class="line gradient-line1"></div>
+                <div class="line gradient-line1">
+                    <div class="guage"></div>
+                </div>
                 <p class="together-desc desc2">We're changing the <span class="gradient-txt1">game</span>.</p>
-                <div class="line gradient-line3"></div>
+                <div class="line gradient-line3">
+                    <div class="guage"></div>
+                </div>
                 <p class="together-desc desc3">You're never the <span class="gradient-txt1">target</span>.</p>
-                <div class="line gradient-line5"></div>
+                <div class="line gradient-line5">
+                    <div class="guage"></div>
+                </div>
                 <p class="together-desc desc4">At Stryds you're the <span class="gradient-txt1">aim</span></p>
-                <div class="line gradient-line4"></div>
+                <div class="line gradient-line4">
+                    <div class="guage"></div>
+                </div>
             </div>
         </section>
         <section class="sc-story">
@@ -458,45 +491,89 @@
                     <a href="#" class="link-game">I'm <span class="gradient-txt1">game</span>.</a>
                 </div>
             </div>
-            <div class="send-bg">
-                <div class="bg-column1">
-                    <div class="bg-wrap">
-                        <i class="ic-img">
-                            <img src="./asset/images/card-thumb1.png" alt="card-bg">
-                        </i>
-                        <i class="ic-img">
-                            <img src="./asset/images/card-thumb2.png" alt="card-bg">
-                        </i>
+            <div class="send-bg-wrap">
+                <div class="send-bg">
+                    <div class="bg-column1">
+                        <div class="bg-wrap">
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb1.png" alt="card-bg">
+                            </i>
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb2.png" alt="card-bg">
+                            </i>
+                        </div>
+                    </div>
+                    <div class="bg-column2">
+                        <div class="bg-wrap">
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb3.png" alt="card-bg">
+                            </i>
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb4.png" alt="card-bg">
+                            </i>
+                        </div>
+                    </div>
+                    <div class="bg-column3">
+                        <div class="bg-wrap">
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb2.png" alt="card-bg">
+                            </i>
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb1.png" alt="card-bg">
+                            </i>
+                        </div>
+                    </div>
+                    <div class="bg-column4">
+                        <div class="bg-wrap">
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb3.png" alt="card-bg">
+                            </i>
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb4.png" alt="card-bg">
+                            </i>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-column2">
-                    <div class="bg-wrap">
-                        <i class="ic-img">
-                            <img src="./asset/images/card-thumb3.png" alt="card-bg">
-                        </i>
-                        <i class="ic-img">
-                            <img src="./asset/images/card-thumb4.png" alt="card-bg">
-                        </i>
+                <div class="send-bg">
+                    <div class="bg-column1">
+                        <div class="bg-wrap">
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb1.png" alt="card-bg">
+                            </i>
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb2.png" alt="card-bg">
+                            </i>
+                        </div>
                     </div>
-                </div>
-                <div class="bg-column3">
-                    <div class="bg-wrap">
-                        <i class="ic-img">
-                            <img src="./asset/images/card-thumb2.png" alt="card-bg">
-                        </i>
-                        <i class="ic-img">
-                            <img src="./asset/images/card-thumb1.png" alt="card-bg">
-                        </i>
+                    <div class="bg-column2">
+                        <div class="bg-wrap">
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb3.png" alt="card-bg">
+                            </i>
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb4.png" alt="card-bg">
+                            </i>
+                        </div>
                     </div>
-                </div>
-                <div class="bg-column4">
-                    <div class="bg-wrap">
-                        <i class="ic-img">
-                            <img src="./asset/images/card-thumb3.png" alt="card-bg">
-                        </i>
-                        <i class="ic-img">
-                            <img src="./asset/images/card-thumb4.png" alt="card-bg">
-                        </i>
+                    <div class="bg-column3">
+                        <div class="bg-wrap">
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb2.png" alt="card-bg">
+                            </i>
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb1.png" alt="card-bg">
+                            </i>
+                        </div>
+                    </div>
+                    <div class="bg-column4">
+                        <div class="bg-wrap">
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb3.png" alt="card-bg">
+                            </i>
+                            <i class="ic-img">
+                                <img src="./asset/images/card-thumb4.png" alt="card-bg">
+                            </i>
+                        </div>
                     </div>
                 </div>
             </div>
