@@ -17,6 +17,7 @@
     background-color: #000;
     .gradient-line1 {
         width: 30vw;
+        margin: 0;
         @include position-Center;
     }
 }

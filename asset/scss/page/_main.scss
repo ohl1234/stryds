@@ -75,7 +75,7 @@
         padding: 144px 55px 0;
         .txt-area {
             .sc-title {
-                span{
+                .tit-msg{
                     font-size: 200px;
                     line-height: 223px;
                     letter-spacing: -3px;
@@ -111,10 +111,13 @@
         padding: 144px 34px 0;
         .txt-area {
             .sc-title {
-                span{
+                .tit-msg{
                     font-size: 155px;
                     line-height: 177px;
                     letter-spacing: 0;
+                    &:first-of-type {
+                        vertical-align: 0;
+                    }
                 }
             }
             .visual-desc {
@@ -143,7 +146,7 @@
     .sc-visual {
         .txt-area {
             .sc-title {
-                span{
+                .tit-msg{
                     font-size: 110px;
                     line-height: 126px;
                     letter-spacing: 0;

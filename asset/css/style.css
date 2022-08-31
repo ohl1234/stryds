@@ -226,6 +226,7 @@ input, select, button, fieldset {
 }
 .loading .gradient-line1 {
   width: 30vw;
+  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -448,7 +449,7 @@ input, select, button, fieldset {
     flex-direction: column;
     padding: 144px 55px 0;
   }
-  .sc-visual .txt-area .sc-title span {
+  .sc-visual .txt-area .sc-title .tit-msg {
     font-size: 200px;
     line-height: 223px;
     letter-spacing: -3px;
@@ -479,10 +480,13 @@ input, select, button, fieldset {
   .sc-visual {
     padding: 144px 34px 0;
   }
-  .sc-visual .txt-area .sc-title span {
+  .sc-visual .txt-area .sc-title .tit-msg {
     font-size: 155px;
     line-height: 177px;
     letter-spacing: 0;
+  }
+  .sc-visual .txt-area .sc-title .tit-msg:first-of-type {
+    vertical-align: 0;
   }
   .sc-visual .txt-area .visual-desc {
     font-size: 30px;
@@ -504,7 +508,7 @@ input, select, button, fieldset {
   }
 }
 @media (max-width: 479px) {
-  .sc-visual .txt-area .sc-title span {
+  .sc-visual .txt-area .sc-title .tit-msg {
     font-size: 110px;
     line-height: 126px;
     letter-spacing: 0;
