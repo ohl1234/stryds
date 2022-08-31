@@ -971,6 +971,7 @@
         background-color: #fff;
         opacity: 0.89;
         img {
+            max-width: none;
             height: 100%;
             -webkit-filter: contrast(121%) grayscale(100%);
             filter: contrast(121%) grayscale(100%);

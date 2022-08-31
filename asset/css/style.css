@@ -1273,6 +1273,7 @@ input, select, button, fieldset {
   opacity: 0.89;
 }
 .sc-story .link-story img {
+  max-width: none;
   height: 100%;
   filter: contrast(121%) grayscale(100%);
 }
