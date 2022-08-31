@@ -66,7 +66,7 @@ $(function(){
             trigger:".sc-you .thumb-box",
             start:'top bottom',
             end:'bottom top',
-            markers:true,
+            //markers:true,
             scrub:1
         },
         yPercent:-120,
@@ -74,8 +74,23 @@ $(function(){
         scrub:1
     })
 
+    lineMotion = gsap.timeline({
+        scrollTrigger:{
+            trigger:'.sc-you .group-flex1',
+            start:'top bottom',
+            end:'150% -100%',
+            scrub:1
+        }
+    })
+    lineMotion.addLabel('a')
+    .from('.sc-you .gradient-line2 .guage',{width:0,duration:1},'a-=0.1')
+    .from('.sc-you .gradient-line1 .guage',{width:0,duration:1},'a+=0.2')
+    .from('.sc-you .gradient-line3 .guage',{width:0,duration:1},'a+=0.3')
+    .from('.sc-you .gradient-line5 .guage',{width:0,duration:1},'a+=0.4')
+    .from('.sc-you .gradient-line4 .guage',{width:0,duration:1},'a+=0.5')
+
     /**
-     * app
+     * sc-app
      */
     appMotion = gsap.timeline({
         scrollTrigger:{
@@ -83,7 +98,7 @@ $(function(){
             start:"top bottom",
             end:"bottom top",
             scrub:1,
-            markers:true
+            //markers:true
         }
     })
     appMotion.addLabel('a')
@@ -98,6 +113,38 @@ $(function(){
         }
     },'a') // -100 -> 100
 
+    $('[data-parallex]').each(function(i,el){
+        parent = $(this).parents('.device-item');
+        gsap.to(el,{
+            scrollTrigger:{
+                trigger:parent,
+                start:"top bottom", 
+                end:"bottom top",
+                scrub:1,
+                duration:3
+            },
+            yPercent:-8
+        })
+    })
+    /**
+     * sc-paragraph
+     */
+    gsap.set('.sc-paragraph .vt-line',{height:0})
+    $('.sc-paragraph').find('div').each(function(i,el){
+        child = $(this).find('.vt-line')
+        gsap.to(child,{
+            scrollTrigger:{
+                trigger:el,
+                start:'top 80%',
+                end:'110% top',
+                scrub:0,
+                ease:'none',
+                markers:true
+            },
+            height:"100%"
+        })
+    })
+
     /**
      * sc-feature
      */
@@ -110,13 +157,16 @@ $(function(){
                 trigger:el,
                 start: 'top 100%',
                 end: 'bottom top',
-                markers:true,
-                scrub:1
+                scrub:0,
+                ease:'none'
             },
             width:'97%'
         })
     })
 
+    /**
+     * sc-together
+     */
     const canvas = document.getElementById('canvas');
 	const ctx = canvas.getContext('2d');
 	canvas.width = 575;
@@ -144,7 +194,7 @@ $(function(){
 			scrub: 1,
 			start: 'top top',
 			end: 'bottom bottom', //+=500% 내 영역이 5배만큼 가상스크롤
-            markers:true,
+            //markers:true,
             // pin:true -> 고정 
             // 리퀘스트 애니메이션
 		},
@@ -156,6 +206,19 @@ $(function(){
 		ctx.drawImage(images[card.frame], 0, 0 ,575,696);
 	}
 
-
+    lineMotion3 = gsap.timeline({
+        scrollTrigger:{
+            trigger:'.sc-together .group-flex3',
+            start:'top bottom',
+            end:'150% -100%',
+            scrub:1
+        }
+    })
+    lineMotion3.addLabel('a')
+    .from('.sc-together .gradient-line2 .guage',{width:0,duration:1},'a-=0.1')
+    .from('.sc-together .gradient-line1 .guage',{width:0,duration:1},'a+=0.2')
+    .from('.sc-together .gradient-line3 .guage',{width:0,duration:1},'a+=0.3')
+    .from('.sc-together .gradient-line5 .guage',{width:0,duration:1},'a+=0.4')
+    .from('.sc-together .gradient-line4 .guage',{width:0,duration:1},'a+=0.5')
 
 })

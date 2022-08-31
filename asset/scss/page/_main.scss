@@ -415,11 +415,12 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 100%;
+        height: 21vh;
     }
     .vt-line{
         width: 0.2px;
-        height: 21vh;
+        height: 100%;
+        transition: all 0.1s;
     }
     .paragraph{
         padding: 5.5vh 0;
@@ -455,9 +456,11 @@
 // sc-paragraph responsive start
 @include laptop {
     .sc-paragraph {
+        .line-wrap {
+            height: 100px;
+        }
         .vt-line{
             width: 1px;
-            height: 100px;
         }
         .paragraph{
             font-size: 140px;
@@ -474,7 +477,7 @@
 }
 @include tablet {
     .sc-paragraph {
-        .vt-line{
+        .line-wrap {
             height: 89px;
         }
         .paragraph{
@@ -495,7 +498,7 @@
 }
 @include mobile {
     .sc-paragraph {
-        .vt-line{
+        .line-wrap {
             height: 144px;
         }
         .paragraph{
