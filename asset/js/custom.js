@@ -236,7 +236,7 @@ $(function(){
                     end:'bottom top',
                     scrub:0,
                     ease:'none',
-                    markers:true,
+                    //markers:true,
                     stagger:0.2
                 },
                 height:'100%',
@@ -249,7 +249,7 @@ $(function(){
                     end:'30% top',
                     scrub:0,
                     ease:'none',
-                    markers:true,
+                    //markers:true,
                     stagger:0.2
                 },
                 height:'100%',
