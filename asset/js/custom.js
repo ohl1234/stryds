@@ -214,21 +214,73 @@ $(function(){
              * sc-paragraph
              */
             gsap.set('.sc-paragraph .vt-line',{height:0})
-            $('.sc-paragraph').find('div').each(function(i,el){
-                child = $(this).find('.vt-line')
-                gsap.to(child,{
-                    scrollTrigger:{
-                        trigger:el,
-                        start:'top 80%',
-                        end:'110% top',
-                        scrub:0,
-                        ease:'none',
-                        //markers:true
-                    },
-                    height:"100%"
-                })
+            // $('.sc-paragraph').find('div').each(function(i,el){
+            //     child = $(this).find('.vt-line')
+            //     gsap.to(child,{
+            //         scrollTrigger:{
+            //             trigger:el,
+            //             start:'top 80%',
+            //             end:'bottom top',
+            //             scrub:0,
+            //             ease:'none',
+            //             //markers:true,
+            //             stagger:0.2
+            //         },
+            //         height:"100%"
+            //     })
+            // })
+            gsap.to('.paragraph-wrap1 .top .vt-line',{
+                scrollTrigger:{
+                    trigger:'.paragraph-wrap1',
+                    start:'top 90%',
+                    end:'bottom top',
+                    scrub:0,
+                    ease:'none',
+                    markers:true,
+                    stagger:0.2
+                },
+                height:'100%',
+                delay:0.1
             })
-
+            gsap.to('.paragraph-wrap1 .bottom .vt-line',{
+                scrollTrigger:{
+                    trigger:'.paragraph-wrap1',
+                    start:'bottom bottom',
+                    end:'30% top',
+                    scrub:0,
+                    ease:'none',
+                    markers:true,
+                    stagger:0.2
+                },
+                height:'100%',
+                delay:0.2
+            })
+            gsap.to('.paragraph-wrap2 .top .vt-line',{
+                scrollTrigger:{
+                    trigger:'.paragraph-wrap2',
+                    start:'15% bottom',
+                    end:'20% top',
+                    scrub:0,
+                    ease:'none',
+                    //markers:true,
+                    stagger:0.2
+                },
+                height:'100%',
+                delay:0.3
+            })
+            gsap.to('.paragraph-wrap2 .bottom .vt-line',{
+                scrollTrigger:{
+                    trigger:'.paragraph-wrap2',
+                    start:'bottom bottom',
+                    end:'bottom top',
+                    scrub:0,
+                    ease:'none',
+                    //markers:true,
+                    stagger:0.2
+                },
+                height:'100%',
+                delay:0.4
+            })
             /**
              * sc-feature
              */
